@@ -61,7 +61,7 @@ class ServiceOrderServiceTest {
         );
 
         when(catalogService.ensureCarExists("car-1")).thenReturn(new CarEntity("car-1", "Ford", "Focus", 2018, "B-99-XYZ", "client-1"));
-        when(catalogService.ensureMechanicExists("mech-1")).thenReturn(new MechanicEntity("mech-1", "Ion", "Popescu", "0711"));
+        when(catalogService.ensureMechanicExists("mech-1")).thenReturn(new MechanicEntity("mech-1", "Ion", "Popescu", "0711", 0.0, 0));
         when(catalogService.ensurePartExists("part-1")).thenReturn(
                 new PartEntity("part-1", "Spark Plug", 10, BigDecimal.valueOf(35), "sup-1"));
 
@@ -104,7 +104,7 @@ class ServiceOrderServiceTest {
         );
 
         when(catalogService.ensureCarExists("car-1")).thenReturn(new CarEntity("car-1", "Ford", "Focus", 2018, "B-99-XYZ", "client-1"));
-        when(catalogService.ensureMechanicExists("mech-1")).thenReturn(new MechanicEntity("mech-1", "Ion", "Popescu", "0711"));
+        when(catalogService.ensureMechanicExists("mech-1")).thenReturn(new MechanicEntity("mech-1", "Ion", "Popescu", "0711", 0.0, 0));
         when(catalogService.ensurePartExists("part-1")).thenReturn(
                 new PartEntity("part-1", "Oil Filter", 2, BigDecimal.valueOf(20), "sup-1"));
 

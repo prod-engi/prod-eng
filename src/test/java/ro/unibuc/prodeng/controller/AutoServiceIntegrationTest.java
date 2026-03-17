@@ -192,7 +192,9 @@ class AutoServiceIntegrationTest extends IntegrationTestBase {
                 "mechanic-1",
                 "Andrei",
                 "Pop",
-                "0733222111"
+                "0733222111",
+                0.0,
+                0
         ));
 
         supplierRepository.save(new SupplierEntity(

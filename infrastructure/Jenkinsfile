@@ -13,6 +13,12 @@ pipeline {
     }
 
     stages {
+        stage('Prepare Workspace') {
+            steps {
+                sh 'git clean -fdx'
+            }
+        }
+
         stage('Build') {
             steps {
                 sh './gradlew clean build'
@@ -75,7 +81,7 @@ pipeline {
 
     post {
         always {
-            sh 'docker logout'
+            sh 'docker logout || true'
         }
     }
 }
